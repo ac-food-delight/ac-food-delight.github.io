@@ -1,0 +1,15 @@
+{
+    "short_name": "A & C FOOD Delight",
+    "name": "Delicious Food Every Time",
+    "icons": [
+      {
+        "src": "./res/logo2.png",
+        "sizes": "86x86",
+        "type": "image/png"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#17181a",
+    "background_color": "#17181a"
+  }

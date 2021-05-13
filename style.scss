@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
+
+:root {
+  --bg: #fefefe;
+  --sbg: #f1f1f1;
+  --primary: #343434;
+  --acc: #feb08a;
+  --acc2: #9ac695;
+  --font: "Poppins", sans-serif;
+}
+
+.orange {
+  color: var(--acc);
+}
+
+.green {
+  color: var(--acc2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+  color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+}
+
+section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+//Styles
+
+nav {
+  background: var(--bg);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+  .wrapper {
+    width: 100vw;
+    max-width: 1100px;
+
+    $nn: 1rem;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    gap: $nn;
+    .logo {
+      width: 5rem;
+      //background: blue;
+    }
+
+    .navBar {
+      //background: blue;
+      display: flex;
+      gap: 2rem;
+
+      color: var(--primary);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.099rem;
+
+      a {
+        transition: transform 500ms ease, color 500ms ease;
+
+        &:first-child:active {
+          color: var(--acc);
+          transform: scale(0.8);
+        }
+
+        &:last-child:active {
+          color: var(--acc2);
+          transform: scale(0.8);
+        }
+      }
+
+      a:first-child:hover {
+        color: var(--acc);
+      }
+      a:last-child:hover {
+        color: var(--acc2);
+      }
+    }
+  }
+}
+
+.hero {
+  width: 100vw;
+
+  .wrapper {
+    width: calc(100vw - 4rem);
+    max-width: 1100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+
+    .main,
+    .imgWrapper {
+      width: 50%;
+      height: 100%;
+      height: inherit;
+      padding: 1rem;
+    }
+
+    .imgWrapper {
+      width: 50%;
+      background-image: url("./res/cookie.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-size: 80%;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        color: var(--primary);
+        font-size: 7vmin;
+        font-weight: 600;
+
+        span {
+          font-weight: 700;
+          font-size: 8vmin;
+          text-transform: uppercase;
+          line-height: 0.8rem;
+          letter-spacing: 4px;
+        }
+      }
+
+      button {
+        font-family: var(--font);
+        border: none;
+        width: fit-content;
+        font-size: 1.7vmin;
+        letter-spacing: 1px;
+        padding: 0.6rem 1.2rem;
+        border-radius: 100px;
+        font-weight: 700;
+        color: var(--sbg);
+        box-shadow: 0px 5px 10px #0000002f;
+        margin-top: 1rem;
+        cursor: pointer;
+        background: linear-gradient(to right, var(--acc), var(--acc2));
+
+        transition: filter 500ms ease, transform 500ms ease;
+
+        &:hover {
+          filter: hue-rotate(100deg);
+          transform: scale(1.06);
+        }
+
+        &:active {
+          transform: scale(0.96);
+        }
+      }
+    }
+  }
+}
+
+.about {
+  background: var(--sbg);
+  //padding: 5rem 0rem;
+  .wrapper {
+    max-width: 1100px;
+    padding: 1rem;
+
+    h1 {
+      text-align: center;
+      padding: 2rem 0rem 1rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    p {
+      max-width: 75ch;
+      font-weight: 400;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      font-size: 0.96rem;
+      line-height: 2.2rem;
+      opacity: 0.9;
+      padding-bottom: 2rem;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.products {
+  margin-top: 3rem;
+  h1 {
+    text-align: center;
+    padding: 2rem 0rem 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .gridCard {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    margin-top: 2rem;
+    gap: 5rem;
+
+    grid-template-columns: repeat(auto-fit, 10.4rem);
+
+    .card {
+      position: relative;
+      width: 10.4rem;
+      background: var(--sbg);
+      border-radius: 9px;
+      height: 12.2rem;
+      box-shadow: 0px 5px 10px #0000002f;
+      padding: 1rem;
+
+      display: flex;
+      align-items: flex-end;
+      cursor: pointer;
+      transition: transform 500ms 100ms ease;
+
+      &:hover {
+        transform: scale(1.05);
+        .cookie {
+          transform: scale(1.2) rotate(-20deg);
+        }
+
+        .cake {
+          transform: scale(1.2) rotate(-20deg);
+        }
+
+        .coffeJelly {
+          transform: scale(1.2) rotate(0deg);
+        }
+      }
+
+      &:active {
+        transform: scale(0.8);
+      }
+
+      .cardName {
+        position: relative;
+        font-size: 1.7rem;
+        word-spacing: 9999999px;
+        text-transform: lowercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        line-height: 2.3rem;
+        opacity: 0.8;
+        margin-bottom: 1rem;
+        user-select: none;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 2rem;
+          height: 4px;
+          background: var(--primary);
+          opacity: 0.3;
+          border-radius: 10px;
+        }
+      }
+
+      img {
+        user-select: none;
+        transition: transform 500ms 100ms ease;
+      }
+
+      .cookie {
+        width: 120%;
+        position: absolute;
+        transform: rotate(-20deg);
+        top: -10%;
+        left: -10%;
+      }
+
+      .cake {
+        width: 110%;
+        position: absolute;
+        transform: rotate(-20deg);
+        top: -20%;
+        left: 0;
+        filter: drop-shadow(0px 5px 4px #00000054);
+      }
+
+      .coffeJelly {
+        width: 130%;
+        position: absolute;
+        transform: rotate(0deg);
+        top: -35%;
+        left: -10%;
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 10rem;
+  padding: 3rem 0rem;
+
+  width: 100vw;
+  background: var(--sbg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .wrapper {
+    width: inherit;
+    max-width: 1100px;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .vendorLocation,
+    .vendorOptionBar,
+    .vendorContactItem,
+    .followList {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+
+    .vendorLocation,
+    .vendorContactItem {
+      align-items: center;
+      justify-content: flex-start;
+      opacity: 0.8;
+      i {
+        width: max-content;
+        height: inherit;
+        font-size: 1.2rem;
+        transform: translateY(-1px);
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    .vendorOptionBar {
+      display: flex;
+      justify-content: space-between;
+      flex-basis: 100%;
+      & > * {
+        width: 50%;
+      }
+    }
+
+    .vendorContacts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .vendorBar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      .vendorLogo {
+        $logosize: 4rem;
+        width: $logosize;
+        height: $logosize;
+        border-radius: 5px;
+        //background: var(--sbg);
+        //filter: brightness(0.8);
+      }
+
+      .vendorMain {
+        display: flex;
+        flex-direction: column;
+
+        .vendorTitle {
+          font-size: 1.7rem;
+          font-weight: 750;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    .vendorFollow {
+      display: flex;
+      flex-direction: column;
+
+      align-items: flex-end;
+      gap: 0.4rem;
+
+      div {
+        width: 10rem;
+      }
+
+      .followList {
+        gap: 1.5rem;
+        i {
+          font-size: 1.5rem;
+          transition: color 500ms ease;
+        }
+
+        a {
+          transition: transform 500ms ease;
+          &:nth-child(1):hover {
+            i {
+              color: rgb(0, 110, 255);
+            }
+          }
+
+          &:nth-child(2):hover {
+            i {
+              color: rgb(101, 35, 255);
+            }
+          }
+
+          &:nth-child(3):hover {
+            i {
+              color: rgb(255, 35, 127);
+            }
+          }
+
+          &:hover {
+            transform: scale(1.2);
+          }
+
+          &:active {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  nav {
+    .wrapper {
+      padding: 0.5rem 1rem;
+      .logo {
+        width: 4rem;
+      }
+    }
+  }
+
+  .hero {
+    .wrapper {
+      width: calc(100vw - 2rem);
+      max-width: 1100px;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      flex-basis: 100%;
+
+      .main,
+      .imgWrapper {
+        width: 50%;
+        height: 100%;
+        height: inherit;
+        padding: 1rem;
+      }
+
+      .imgWrapper {
+        position: absolute;
+        right: 0;
+        width: 60%;
+        display: none;
+      }
+
+      .main {
+        width: 100%;
+
+        p {
+          font-size: 2.5rem;
+          span {
+            font-size: 3rem;
+          }
+        }
+
+        button {
+          font-size: 0.9rem;
+          margin-top: 1.5rem;
+
+          &:hover {
+            filter: hue-rotate(100deg);
+            transform: scale(1.06);
+          }
+
+          &:active {
+            transform: scale(0.96);
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-top: 5rem;
+    padding: 2rem 0rem;
+
+    width: 100vw;
+    background: var(--sbg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .wrapper {
+      width: inherit;
+      max-width: 1100px;
+      padding: 1rem;
+      gap: 2rem;
+
+      .vendorLocation,
+      .vendorOptionBar,
+      .vendorContactItem,
+      .followList {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+      }
+
+      .vendorLocation,
+      .vendorContactItem {
+        align-items: center;
+        justify-content: flex-start;
+        opacity: 0.9;
+        i {
+          width: max-content;
+          height: inherit;
+          font-size: 1.1rem;
+          transform: translateY(-1px);
+        }
+
+        p {
+          font-size: 0.9rem;
+          font-weight: 500;
+          letter-spacing: 0.07rem;
+        }
+      }
+
+      .vendorOptionBar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-basis: 100%;
+        gap: 1.5rem;
+        & > * {
+          width: 100%;
+        }
+      }
+
+      .vendorContacts {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .vendorBar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        .vendorLogo {
+          $logosize: 3rem;
+          width: $logosize;
+          height: $logosize;
+        }
+
+        .vendorMain {
+          display: flex;
+          flex-direction: column;
+
+          .vendorTitle {
+            font-size: 1.2rem;
+            font-weight: 750;
+            letter-spacing: 1px;
+          }
+        }
+      }
+
+      .vendorFollow {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        gap: 0.4rem;
+
+        div {
+          width: auto;
+        }
+      }
+    }
+  }
+}

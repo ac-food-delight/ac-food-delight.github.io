@@ -1,0 +1,819 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
+:root {
+  --bg: #fefefe;
+  --sbg: #f1f1f1;
+  --primary: #343434;
+  --acc: #feb08a;
+  --acc2: #9ac695;
+  --font: "Poppins", sans-serif;
+}
+
+.orange {
+  color: var(--acc);
+}
+
+.green {
+  color: var(--acc2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--font);
+  color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+body {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: var(--font);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+section {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav {
+  background: var(--bg);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+}
+
+nav .wrapper {
+  width: 100vw;
+  max-width: 1100px;
+  background: var(--bg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 2rem;
+  gap: 1rem;
+}
+
+nav .wrapper .logo {
+  width: 5rem;
+}
+
+nav .wrapper .navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  color: var(--primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.099rem;
+}
+
+nav .wrapper .navBar a {
+  -webkit-transition: color 500ms ease, -webkit-transform 500ms ease;
+  transition: color 500ms ease, -webkit-transform 500ms ease;
+  transition: transform 500ms ease, color 500ms ease;
+  transition: transform 500ms ease, color 500ms ease, -webkit-transform 500ms ease;
+}
+
+nav .wrapper .navBar a:first-child:active {
+  color: var(--acc);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+nav .wrapper .navBar a:last-child:active {
+  color: var(--acc2);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+nav .wrapper .navBar a:first-child:hover {
+  color: var(--acc);
+}
+
+nav .wrapper .navBar a:last-child:hover {
+  color: var(--acc2);
+}
+
+.hero {
+  width: 100vw;
+}
+
+.hero .wrapper {
+  width: calc(100vw - 4rem);
+  max-width: 1100px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.hero .wrapper .main,
+.hero .wrapper .imgWrapper {
+  width: 50%;
+  height: 100%;
+  height: inherit;
+  padding: 1rem;
+}
+
+.hero .wrapper .imgWrapper {
+  width: 50%;
+  background-image: url("./res/cookie.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-size: 80%;
+}
+
+.hero .wrapper .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero .wrapper .main p {
+  color: var(--primary);
+  font-size: 7vmin;
+  font-weight: 600;
+}
+
+.hero .wrapper .main p span {
+  font-weight: 700;
+  font-size: 8vmin;
+  text-transform: uppercase;
+  line-height: 0.8rem;
+  letter-spacing: 4px;
+}
+
+.hero .wrapper .main button {
+  font-family: var(--font);
+  border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.7vmin;
+  letter-spacing: 1px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 100px;
+  font-weight: 700;
+  color: var(--sbg);
+  -webkit-box-shadow: 0px 5px 10px #0000002f;
+          box-shadow: 0px 5px 10px #0000002f;
+  margin-top: 1rem;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(var(--acc)), to(var(--acc2)));
+  background: linear-gradient(to right, var(--acc), var(--acc2));
+  -webkit-transition: -webkit-filter 500ms ease, -webkit-transform 500ms ease;
+  transition: -webkit-filter 500ms ease, -webkit-transform 500ms ease;
+  transition: filter 500ms ease, transform 500ms ease;
+  transition: filter 500ms ease, transform 500ms ease, -webkit-filter 500ms ease, -webkit-transform 500ms ease;
+}
+
+.hero .wrapper .main button:hover {
+  -webkit-filter: hue-rotate(100deg);
+          filter: hue-rotate(100deg);
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+
+.hero .wrapper .main button:active {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+.about {
+  background: var(--sbg);
+}
+
+.about .wrapper {
+  max-width: 1100px;
+  padding: 1rem;
+}
+
+.about .wrapper h1 {
+  text-align: center;
+  padding: 2rem 0rem 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.about .wrapper p {
+  max-width: 75ch;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-size: 0.96rem;
+  line-height: 2.2rem;
+  opacity: 0.9;
+  padding-bottom: 2rem;
+}
+
+.about .wrapper p span {
+  font-weight: 700;
+}
+
+.products {
+  margin-top: 3rem;
+}
+
+.products h1 {
+  text-align: center;
+  padding: 2rem 0rem 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.products .gridCard {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  margin-top: 2rem;
+  gap: 5rem;
+  -ms-grid-columns: (10.4rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 10.4rem);
+}
+
+.products .gridCard .card {
+  position: relative;
+  width: 10.4rem;
+  background: var(--sbg);
+  border-radius: 9px;
+  height: 12.2rem;
+  -webkit-box-shadow: 0px 5px 10px #0000002f;
+          box-shadow: 0px 5px 10px #0000002f;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 500ms 100ms ease;
+  transition: -webkit-transform 500ms 100ms ease;
+  transition: transform 500ms 100ms ease;
+  transition: transform 500ms 100ms ease, -webkit-transform 500ms 100ms ease;
+}
+
+.products .gridCard .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.products .gridCard .card:hover .cookie {
+  -webkit-transform: scale(1.2) rotate(-20deg);
+          transform: scale(1.2) rotate(-20deg);
+}
+
+.products .gridCard .card:hover .cake {
+  -webkit-transform: scale(1.2) rotate(-20deg);
+          transform: scale(1.2) rotate(-20deg);
+}
+
+.products .gridCard .card:hover .coffeJelly {
+  -webkit-transform: scale(1.2) rotate(0deg);
+          transform: scale(1.2) rotate(0deg);
+}
+
+.products .gridCard .card:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.products .gridCard .card .cardName {
+  position: relative;
+  font-size: 1.7rem;
+  word-spacing: 9999999px;
+  text-transform: lowercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 2.3rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.products .gridCard .card .cardName::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 2rem;
+  height: 4px;
+  background: var(--primary);
+  opacity: 0.3;
+  border-radius: 10px;
+}
+
+.products .gridCard .card img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: -webkit-transform 500ms 100ms ease;
+  transition: -webkit-transform 500ms 100ms ease;
+  transition: transform 500ms 100ms ease;
+  transition: transform 500ms 100ms ease, -webkit-transform 500ms 100ms ease;
+}
+
+.products .gridCard .card .cookie {
+  width: 120%;
+  position: absolute;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  top: -10%;
+  left: -10%;
+}
+
+.products .gridCard .card .cake {
+  width: 110%;
+  position: absolute;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  top: -20%;
+  left: 0;
+  -webkit-filter: drop-shadow(0px 5px 4px #00000054);
+          filter: drop-shadow(0px 5px 4px #00000054);
+}
+
+.products .gridCard .card .coffeJelly {
+  width: 130%;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  top: -35%;
+  left: -10%;
+}
+
+footer {
+  margin-top: 10rem;
+  padding: 3rem 0rem;
+  width: 100vw;
+  background: var(--sbg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .wrapper {
+  width: inherit;
+  max-width: 1100px;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+footer .wrapper .vendorLocation,
+footer .wrapper .vendorOptionBar,
+footer .wrapper .vendorContactItem,
+footer .wrapper .followList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5rem;
+}
+
+footer .wrapper .vendorLocation,
+footer .wrapper .vendorContactItem {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  opacity: 0.8;
+}
+
+footer .wrapper .vendorLocation i,
+footer .wrapper .vendorContactItem i {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: inherit;
+  font-size: 1.2rem;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+footer .wrapper .vendorLocation p,
+footer .wrapper .vendorContactItem p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+footer .wrapper .vendorOptionBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+footer .wrapper .vendorOptionBar > * {
+  width: 50%;
+}
+
+footer .wrapper .vendorContacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer .wrapper .title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+footer .wrapper .vendorBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+footer .wrapper .vendorBar .vendorLogo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 5px;
+}
+
+footer .wrapper .vendorBar .vendorMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .wrapper .vendorBar .vendorMain .vendorTitle {
+  font-size: 1.7rem;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+footer .wrapper .vendorFollow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 0.4rem;
+}
+
+footer .wrapper .vendorFollow div {
+  width: 10rem;
+}
+
+footer .wrapper .vendorFollow .followList {
+  gap: 1.5rem;
+}
+
+footer .wrapper .vendorFollow .followList i {
+  font-size: 1.5rem;
+  -webkit-transition: color 500ms ease;
+  transition: color 500ms ease;
+}
+
+footer .wrapper .vendorFollow .followList a {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+footer .wrapper .vendorFollow .followList a:nth-child(1):hover i {
+  color: #006eff;
+}
+
+footer .wrapper .vendorFollow .followList a:nth-child(2):hover i {
+  color: #6523ff;
+}
+
+footer .wrapper .vendorFollow .followList a:nth-child(3):hover i {
+  color: #ff237f;
+}
+
+footer .wrapper .vendorFollow .followList a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+footer .wrapper .vendorFollow .followList a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+@media only screen and (max-width: 400px) {
+  nav .wrapper {
+    padding: 0.5rem 1rem;
+  }
+  nav .wrapper .logo {
+    width: 4rem;
+  }
+  .hero .wrapper {
+    width: calc(100vw - 2rem);
+    max-width: 1100px;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .hero .wrapper .main,
+  .hero .wrapper .imgWrapper {
+    width: 50%;
+    height: 100%;
+    height: inherit;
+    padding: 1rem;
+  }
+  .hero .wrapper .imgWrapper {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    display: none;
+  }
+  .hero .wrapper .main {
+    width: 100%;
+  }
+  .hero .wrapper .main p {
+    font-size: 2.5rem;
+  }
+  .hero .wrapper .main p span {
+    font-size: 3rem;
+  }
+  .hero .wrapper .main button {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+  }
+  .hero .wrapper .main button:hover {
+    -webkit-filter: hue-rotate(100deg);
+            filter: hue-rotate(100deg);
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+  }
+  .hero .wrapper .main button:active {
+    -webkit-transform: scale(0.96);
+            transform: scale(0.96);
+  }
+  footer {
+    margin-top: 5rem;
+    padding: 2rem 0rem;
+    width: 100vw;
+    background: var(--sbg);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .wrapper {
+    width: inherit;
+    max-width: 1100px;
+    padding: 1rem;
+    gap: 2rem;
+  }
+  footer .wrapper .vendorLocation,
+  footer .wrapper .vendorOptionBar,
+  footer .wrapper .vendorContactItem,
+  footer .wrapper .followList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0.5rem;
+  }
+  footer .wrapper .vendorLocation,
+  footer .wrapper .vendorContactItem {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    opacity: 0.9;
+  }
+  footer .wrapper .vendorLocation i,
+  footer .wrapper .vendorContactItem i {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: inherit;
+    font-size: 1.1rem;
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+  }
+  footer .wrapper .vendorLocation p,
+  footer .wrapper .vendorContactItem p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.07rem;
+  }
+  footer .wrapper .vendorOptionBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    gap: 1.5rem;
+  }
+  footer .wrapper .vendorOptionBar > * {
+    width: 100%;
+  }
+  footer .wrapper .vendorContacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.5rem;
+  }
+  footer .wrapper .title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  footer .wrapper .vendorBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 1rem;
+  }
+  footer .wrapper .vendorBar .vendorLogo {
+    width: 3rem;
+    height: 3rem;
+  }
+  footer .wrapper .vendorBar .vendorMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .wrapper .vendorBar .vendorMain .vendorTitle {
+    font-size: 1.2rem;
+    font-weight: 750;
+    letter-spacing: 1px;
+  }
+  footer .wrapper .vendorFollow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.4rem;
+  }
+  footer .wrapper .vendorFollow div {
+    width: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
